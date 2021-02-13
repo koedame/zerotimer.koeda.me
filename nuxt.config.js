@@ -7,11 +7,16 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ZeroTimer',
+    title: 'ゼロ秒思考タイマー',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'ゼロ秒思考に特化したタイマーです。1分経過ごとに音で知らせてくれるので集中してゼロ秒思考術に取り組むことが可能です。',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -44,7 +49,35 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      name: 'ゼロ秒思考タイマー',
+      lang: 'ja',
+      icons: ['pwa-192x192.png', 'pwa-512x512.png'],
+    },
+
+    icon: {
+      iconFileName: 'pwa-512x512.png',
+    },
+    meta: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      name: 'ゼロ秒思考タイマー',
+    },
+
+    // workbox options
+    // Doc: https://pwa.nuxtjs.org/modules/workbox.html#options
+    workbox: {
+      // 開発環境で挙動を確認したい場合は有効にする
+      // dev: (environment == 'development'),
+      // オフラインですべての機能が動くのでtrue
+      offline: true,
+      // なんとなくtrue
+      skipWaiting: true,
+      // なんとなくtrue
+      clientsClaim: true,
+      // 不要
+      // offlinePage: '/offline.html'
+      // オフラインで動くが、最新版が反映されやすくするためNetworkFirstを設定
+      offlineStrategy: 'NetworkFirst',
     },
   },
 
