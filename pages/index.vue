@@ -4,9 +4,8 @@
     h1.title ゼロ秒思考タイマー
     ZeroTimer
 
-    hr
-
-    .box.content
+  .section
+    .content
       h2 注意事項
       hr
       ul
@@ -18,8 +17,14 @@
             li ホーム画面に戻ったとき
             li 別のアプリに切り替えたとき
 
-    .box
-      h2.title 書籍情報
+      hr
+
+      b-button#form-button(type="is-warning", icon-left="triangle", @click="openContactFrom")
+        strong 要望・不具合報告はこちら   
+
+  .section
+    .content
+      h2 書籍情報
       hr
       article.media
         figure.media-left

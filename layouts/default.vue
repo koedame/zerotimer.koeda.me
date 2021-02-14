@@ -1,13 +1,7 @@
 <template lang="pug">
 div
   nuxt
-  .container
-    .section
-      .level
-        .level-left
-        .level-right
-          b-button#form-button(type="is-warning", icon-left="triangle", @click="openContactFrom")
-            strong 要望・不具合報告はこちら
+
   footer.footer
     .content.has-text-centered
       p
@@ -19,7 +13,6 @@ div
         a(href="https://github.com/koedame/zerotimer.koeda.me", target="_blank" rel="noopener noreferrer")
           b-icon(icon="github")
           | GitHub
-
 </template>
 
 <script>
