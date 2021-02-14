@@ -20,7 +20,7 @@
       hr
 
       b-button#form-button(type="is-warning", icon-left="triangle", @click="openContactFrom")
-        strong 要望・不具合報告はこちら   
+        strong 要望・不具合報告はこちら
 
   .section
     .content
@@ -44,8 +44,17 @@
 
 <script>
 import ZeroTimer from '~/components/ZeroTimer'
+import ContactForm from '~/components/ContactForm'
 
 export default {
   components: { ZeroTimer },
+  methods: {
+    openContactFrom() {
+      this.$buefy.modal.open({
+        parent: this,
+        component: ContactForm,
+      })
+    },
+  },
 }
 </script>

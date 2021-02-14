@@ -14,18 +14,3 @@ div
           b-icon(icon="github")
           | GitHub
 </template>
-
-<script>
-import ContactForm from '~/components/ContactForm'
-
-export default {
-  methods: {
-    openContactFrom() {
-      this.$buefy.modal.open({
-        parent: this,
-        component: ContactForm,
-      })
-    },
-  },
-}
-</script>
