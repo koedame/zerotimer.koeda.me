@@ -51,11 +51,11 @@ export default {
     manifest: {
       name: 'ゼロ秒思考タイマー',
       lang: 'ja',
-      icons: ['pwa-192x192.png', 'pwa-512x512.png'],
+      icons: ['pwa-192x192.png', 'pwa-512x512.png', 'apple-touch-icon-180x180.png'],
     },
 
     icon: {
-      iconFileName: 'pwa-512x512.png',
+      iconFileName: 'icon.png',
     },
     meta: {
       charset: 'utf-8',
